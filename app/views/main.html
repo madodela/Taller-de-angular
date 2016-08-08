@@ -1,0 +1,42 @@
+<div class="jumbotron">
+  <h1>'Allo, 'Allo!</h1>
+  <p class="lead">
+    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
+    Always a pleasure scaffolding your apps.
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+    <i class="fa fa-child fa-5x" aria-hidden="true"></i>
+</div>
+
+<div class="row marketing">
+    <div ng-controller="TestCtrl1 as test1">
+        {{ test1.source }}
+    </div>
+    <div ng-controller="TestCtrl2">
+        {{ source }}
+    </div>
+    <hr>
+    <h2>Nested scopes with $parent</h2>
+    <div ng-controller="NestedCtrl1">
+        I am {{ source }}
+        <div ng-controller="NestedCtrl2">
+            I am {{ source }} and I'm inside {{ $parent.source }}
+            <div ng-controller="NestedCtrl3">
+                {{ source }}
+                 and I'm inside {{ $parent.source }} and {{ $parent.$parent.source }}
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h2>Nested scopes with controller as</h2>
+    <div ng-controller="NestedCtrl4 as grandpa">
+       I am {{ grandpa.source }}
+        <div ng-controller="NestedCtrl5 as dad">
+            I am {{ dad.source }} and I'm inside {{ grandpa.source }}
+            <div ng-controller="NestedCtrl6 as kid">
+                {{ kid.source }}
+                 and I'm inside {{ dad.source }} and {{ grandpa.source }}
+            </div>
+        </div>
+    </div>
+ </div>

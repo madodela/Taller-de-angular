@@ -1,0 +1,62 @@
+<p>This is the about view.</p>
+<input type="text" ng-model="about.name">
+Hello {{ about.name }}
+<hr>
+<h2>ng-show &amp; ng-hide</h2>
+<div class="panel panel-default">
+    <div class="panel-heading">ng-show &amp; ng-hide</div>
+    <div class="panel-body">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" ng-model="showSomething">Show Something and hide another thing
+            </label>
+        </div>
+        <div class="alert alert-success" ng-show="showSomething">
+            Something
+        </div>
+        <div class="alert alert-warning" ng-hide="showSomething">
+            Another thing
+        </div>
+    </div>
+</div>
+<hr>
+<h2>ng-repeat</h2>
+<div class="panel panel-default">
+    <div class="panel-heading">ng-repeat</div>
+    <div class="panel-body">
+        <div class="alert alert-info" ng-repeat="item in about.awesomeThings">{{$index+1}} : {{item}}
+        </div>
+    </div>
+</div>
+<hr>
+<h2>ng-click</h2>
+<div class="panel panel-default">
+    <div class="panel-heading">ng-click</div>
+    <div class="panel-body" ng-click="about.clickParent($event)">
+      Parent
+      <button class="btn btn-info" ng-click="about.clickChild($event)">Child</button>
+      <button class="btn btn-danger" onClick="onClickNotWork(event)">wrong onClick</button>
+      <button class="btn btn-success" onClick="onClickFromOutside(event)">Click From Outside Angular</button>
+    </div>
+</div>
+<hr>
+<h2>ng-change</h2>
+<div class="panel panel-default">
+    <div class="panel-heading">ng-change</div>
+    <div class="panel-body">
+      <input type="text" ng-change="about.removeSpaces()" ng-model="url">
+      <label>{{url}}</label>
+    </div>
+</div>
+<hr>
+<h2>ng-options</h2>
+<div class="panel panel-default">
+    <div class="panel-heading">ng-options</div>
+    <div class="panel-body">
+      <select ng-options="person.id as person.name for person in about.people" ng-model="about.selectedPerson"></select>
+      <span class="label label-primary">id: {{about.selectedPerson}}</span>
+    </div>
+  </div>
+</div>
+
+
