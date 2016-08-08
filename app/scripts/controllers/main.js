@@ -40,4 +40,15 @@ angular.module('practice1App')
   })
   .controller('NestedCtrl6', function(){
     this.source = 'I am just a kid';
+  })
+  .controller('Practice4', function ($scope, $filter) {
+    $scope.filterArray = [
+      { id: 1, name: "Luis" }, 
+      { id: 2, name: "María" },
+      { id: 3, name: "Lucia" }, 
+      { id: 4, name: "Juan" }, 
+      { id: 5, name: "Sofía" }
+    ];
+  
+    $scope.filteredArray = $filter('filter')($scope.filterArray,{name:'lu'});
   });
