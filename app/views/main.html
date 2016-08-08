@@ -43,24 +43,31 @@
     <hr>
     <div ng-controller="Practice4">
         <div class="panel panel-default">
-        <div class="panel-heading">Pre-defined filters</div>
+            <div class="panel-heading">Pre-defined filters</div>
+            <div class="panel-body">
+                <input type="text" ng-model="preFilters">
+                <span class="label label-primary">{{preFilters | currency : "£" }}</span>
+                <span class="label label-info">{{preFilters | number:2 }}</span>
+                <span class="label label-warning">{{preFilters | uppercase}}</span>
+                <span class="label label-danger">{{preFilters | lowercase}}</span>
+                <hr>
+                <input type="text" ng-model="searchText">
+                <div class="col-md-12" ng-repeat="item in filterArray|filter:{name: searchText} track by $index">{{item.name}}</div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">filter from JavaScript</div>
+            <div class="panel-body">
+                <div class="col-md-12" ng-repeat="item in filteredArray track by $index">{{item.name}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">Custom filter</div>
         <div class="panel-body">
-        <input type="text" ng-model="preFilters">
-        <span class="label label-primary">{{preFilters | currency : "£" }}</span>
-        <span class="label label-info">{{preFilters | number:2 }}</span>
-      <span class="label label-warning">{{preFilters | uppercase}}</span>
-      <span class="label label-danger">{{preFilters | lowercase}}</span>
-      <hr>
-      <input type="text" ng-model="searchText">
-      <div class="col-md-12" ng-repeat="item in filterArray|filter:{name: searchText} track by $index">{{item.name}}</div>
+            <input type="text" ng-model="customFilter">
+            <span class="label label-primary">{{customFilter | bytesFormat }}</span>
+        </div>
     </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">filter from JavaScript</div>
-    <div class="panel-body">
-      <div class="col-md-12" ng-repeat="item in filteredArray track by $index">{{item.name}}</div>
-    </div>
-  </div>
-</div>
 
  </div>
