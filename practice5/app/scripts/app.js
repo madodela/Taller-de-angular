@@ -30,6 +30,47 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+    .state('about.example1', {
+        parent: 'about',
+        views: {
+          aboutContent: {
+            templateUrl: 'views/view1.html'
+          },
+          aboutFooter: {
+            templateUrl: 'views/view2.html'
+          }
+        }
+      }).state('about.example2', {
+        parent: 'about',
+        views: {
+          aboutContent: {
+            templateUrl: 'views/view2.html'
+          },
+          aboutFooter: {
+            templateUrl: 'views/view3.html'
+          }
+        }
+      }).state('about.example3', {
+        parent: 'about',
+        views: {
+          aboutContent: {
+            templateUrl: 'views/view3.html'
+          },
+          aboutFooter: {
+            templateUrl: 'views/view4.html'
+          }
+        }
+      }).state('about.example4', {
+        parent: 'about',
+        views: {
+          aboutContent: {
+            templateUrl: 'views/view4.html'
+          },
+          aboutFooter: {
+            templateUrl: 'views/view1.html'
+          }
+        }
+      })
       .state('404', { //this will be used when none of the earlier states matches.
         url: '/*path', //regex to catch all the paths
         templateUrl: '404.html'
