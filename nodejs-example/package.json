@@ -1,0 +1,22 @@
+{
+  "name": "test-service",
+  "version": "0.0.0",
+  "description": "Simple server to test a service with angular",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "keywords": [
+    "test",
+    "nodej",
+    "server"
+  ],
+  "author": "Luis Humberto Gonzalez Toscano",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.13.4"
+  },
+  "dependencies": {
+    "cors": "^2.7.1"
+  }
+}
