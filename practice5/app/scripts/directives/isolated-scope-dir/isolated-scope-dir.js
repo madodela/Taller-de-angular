@@ -17,7 +17,6 @@ angular.module('practice5App')
       restrict: 'E',
       link: function (scope, element, attrs) {
         scope.isolatedValue = scope.isolatedValue();
-          console.log(attrs);
       }
     };
   });

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="scripts/directives/no-scope-dir/no-scope-dir.css">
     <link rel="stylesheet" href="scripts/directives/with-scope-dir/with-scope-dir.css">
     <link rel="stylesheet" href="scripts/directives/isolated-scope-dir/isolated-scope-dir.css">
+    <link rel="stylesheet" href="scripts/modules/module-no-scope-dir/module-no-scope-dir.css">
     <!-- endbuild -->
   </head>
   <body ng-app="practice5App">
@@ -85,13 +86,14 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/directives/no-scope-dir/no-scope-dir.js"></script>
-        <script src="scripts/directives/with-scope-dir/with-scope-dir.js"></script>
-        <script src="scripts/directives/isolated-scope-dir/isolated-scope-dir.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/modules/module-no-scope-dir/module-no-scope-dir.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/directives/no-scope-dir/no-scope-dir.js"></script>
+    <script src="scripts/directives/with-scope-dir/with-scope-dir.js"></script>
+    <script src="scripts/directives/isolated-scope-dir/isolated-scope-dir.js"></script>
+    <!-- endbuild -->
 </body>
 </html>

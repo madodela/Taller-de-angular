@@ -12,7 +12,8 @@ angular
   .module('practice5App', [
     'ngResource',
     'ngTouch',
-    'ui.router'
+    'ui.router',
+    'moduleNoScopeDir'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     // Default location
