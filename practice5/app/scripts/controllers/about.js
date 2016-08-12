@@ -12,4 +12,5 @@ angular.module('practice5App')
     $scope.noScopeDirectiveValue = 'no scope';
     $scope.withScopeDirectiveValue = 'scope';
     $scope.isolatedScopeDirectiveValue = 'isolated';
+    console.log("From about controller");
   });

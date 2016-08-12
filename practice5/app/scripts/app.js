@@ -16,6 +16,7 @@ angular
     'moduleNoScopeDir'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
+    console.log('from config');
     // Default location
     $urlRouterProvider.otherwise('/');
     $stateProvider
@@ -76,4 +77,7 @@ angular
         url: '/*path', //regex to catch all the paths
         templateUrl: '404.html'
       });
-  });
+  })
+.run(function(){
+    console.log('from run');
+});
