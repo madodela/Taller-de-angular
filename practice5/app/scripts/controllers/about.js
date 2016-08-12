@@ -8,7 +8,8 @@
  * Controller of the practice5App
  */
 angular.module('practice5App')
-  .controller('AboutCtrl', function ($scope) {
+  .controller('AboutCtrl', function ($scope, wait) {
+    console.log(wait);
     $scope.noScopeDirectiveValue = 'no scope';
     $scope.withScopeDirectiveValue = 'scope';
     $scope.isolatedScopeDirectiveValue = 'isolated';

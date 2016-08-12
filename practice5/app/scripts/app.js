@@ -30,7 +30,12 @@ angular
         url: '/about',
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
-        controllerAs: 'about'
+        controllerAs: 'about',
+        resolve: {
+          wait: function (apiService) {
+            return apiService.wait(1000);
+          }
+        }
       })
     .state('about.example1', {
         parent: 'about',
