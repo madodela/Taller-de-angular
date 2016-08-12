@@ -29,7 +29,7 @@ angular.module('moduleNoScopeDir', [])
             post: function postlink(scope, elem, attr) {
               console.log('directive compile post');
             }
-          }
+          };
         },
        /* link: function link() {
             console.log('directive link');

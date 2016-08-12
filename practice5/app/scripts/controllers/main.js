@@ -8,10 +8,10 @@
  * Controller of the practice5App
  */
 angular.module('practice5App')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, taxesFactory) {
+    
+    $scope.getAmountWithTaxes = function(){
+        return taxesFactory.getAmountWithTaxes($scope.factoryValue);
+    };
+    
   });
