@@ -1,21 +1,17 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
-
-<div class="row">
-    <div class="main">
-      <div class="panel panel-default">
-        <div class="panel-heading">Factory</div>
-        <div class="panel-body">
-           <input type="text" ng-model="factoryValue">
-              with taxes: <span class="label label-info"> {{getAmountWithTaxes() | currency}}   </span>
-        </div>
-     </div>
+<div class="main">
+  <div class="panel panel-default">
+    <div class="panel-heading">Factory</div>
+    <div class="panel-body">
+       <input type="text" ng-model="factoryValue">
+          with taxes: <span class="label label-info"> {{getAmountWithTaxes() | currency}}   </span>
     </div>
-
+ </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">Service</div>
+    <div class="panel-body">
+       <ul>
+        <li ng-repeat="user in users">{{user.name}}</li>
+        </ul>
+    </div>
+ </div>
 </div>
